@@ -73,9 +73,6 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
-a {
-  background-color: transparent;
-}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -239,7 +236,7 @@ fieldset {
 
 legend {
   box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
+
   display: table; /* 1 */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
