@@ -17,18 +17,19 @@
 
 /* Global */
 
+
 body {
-  min-width: 960px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans Narrow";
+  font-family: "PT Sans";
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-white);
-  background-image: url("#");
+  /*background-image: url("img\bp.jpg");*/
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -42,9 +43,23 @@ img {
   height: auto;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 /* Main navigation */
 
 .main-navigation {
+  display: grid;
   font-size: 14px;
   line-height: 26px;
   background-color: var(--basic-white);
@@ -52,6 +67,8 @@ img {
 }
 
 .site-navigation a{
+  margin: 0;
+  padding: 0;
   background-color: var(--basic-white);
   color: var(--basic-black);
   text-transform: uppercase;
@@ -61,7 +78,12 @@ img {
   list-style: none;
 }
 
+.main-header-logo {
+  order: 1;
+  justify-self: center;
+}
 /* Header */
+
 .container-header {
   background-color: var(--basic-white);
 }
@@ -80,13 +102,49 @@ img {
   font-size: 14px;
   line-height: 26px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 400;
+}
+
+.header-logo-background {
+  background-color: var(--basic-white);
+  background-image: url("img\bp.jpg");
+  width: 1200px;
+  height: 509;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 0px;
+  }
+
+.main-navigation-wrapper {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  background-color: var(--basic-white);
+}
+
+.main-header-bar {
+  background-color: var(--basic-white);
+}
+
+.main-navigation-wrapper {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 /* Features */
 
 .advantage-first {
   background-color: var(--basic-blue);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
    }
 
 .advantage-first h3 {
@@ -102,7 +160,7 @@ img {
   color: var(--basic-white);
   font-size: 14px;
   line-height: 21px;
-  font-weight: normal;
+  font-weight: 400;
   text-align: center;
  }
 
@@ -120,7 +178,7 @@ img {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .features-item-first h3 {
@@ -141,7 +199,7 @@ img {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 400;
 }
 .advantage-third-text h3{
   background-color: var(--basic-blue);
@@ -161,7 +219,7 @@ img {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .features-item-second h3{
@@ -189,7 +247,7 @@ img {
   color: var(--basic-grey-darken);
   font-size: 14px;
   line-height: 24px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .find-hotel-button {
@@ -237,7 +295,8 @@ img {
 /* Social button */
 
 .social-button {
-  color: var(--basic-white);
+  width: 46px;
+  height: 48px;
   background-color: var(--basic-blue);
 }
 
@@ -251,7 +310,7 @@ img {
   color: var(--basic-black);
   font-size: 14px;
   line-height: 26px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 /* Modal */
@@ -270,12 +329,30 @@ img {
 }
 
 .button {
+  font: inherit;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
   background-color: var(--basic-blue);
   color: var(--basic-white);
   border: none;
   font-size: 21px;
   line-height: 26px;
 }
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: var(--basic-blue-darken);
+}
+
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--basic-blue);
+}
+
 
 .infrastructure {
   /*background-color: var(--basic-white);*/
@@ -296,7 +373,7 @@ img {
  color: var(--basic-black);
  font-size: 14px;
  line-height: 21px;
- font-weight: normal;
+ font-weight: 400;
  text-align: center;
 }
 
@@ -319,7 +396,7 @@ img {
   color: var(--basic-black);
   font-size: 14px;
   line-height: 21px;
-  font-weight: normal;
+  font-weight: 400;
   text-align: center;
  }
 
@@ -338,7 +415,7 @@ img {
   color: var(--basic-black);
   font-size: 14px;
   line-height: 21px;
-  font-weight: normal;
+  font-weight: 400;
   text-align: center;
  }
 
@@ -358,8 +435,8 @@ img {
 .sort-find {
   background-color: var(--basic-white);
   color: var(--basic-black);
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .sort-name {
@@ -367,7 +444,7 @@ img {
   color: var(--basic-black);
   font-size: 12px;
   line-height: 18px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .sort-list {
@@ -379,7 +456,7 @@ img {
   color: var(--basic-blue);
   font-size: 12px;
   line-height: 18px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .sort-item a{
@@ -387,8 +464,27 @@ img {
   color: var(--basic-black);
   font-size: 12px;
   line-height: 18px;
-  font-weight: normal;
-  text-decoration: underline;
+  font-weight: 400;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--basic-blue);
+}
+
+.sort-item-cost a:hover,
+.sort-item-cost a:focus,
+.sort-item-cost a:active {
+  background-color: var(--basic-white);
+}
+
+.sort-item-cost a.disabled,
+.sort-item-cost a:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: var(--basic-white);
+}
+
+.sort-item a:hover,
+.sort-item a:focus {
+  text-decoration: none;
 }
 
 .places-list {
@@ -407,7 +503,7 @@ img {
   color: var(--basic-black);
   font-size: 14px;
   line-height: 21px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 
@@ -416,5 +512,6 @@ img {
   color: var(--basic-grey-light);
   font-size: 14px;
   line-height: 21px;
-  font-weight: normal;
+  font-weight: 400;
+  text-align: center;
 }
