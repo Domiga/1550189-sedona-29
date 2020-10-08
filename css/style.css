@@ -71,16 +71,17 @@ img {
 
 .site-navigation {
   display: flex;
+  flex-direction: row;
   list-style: none;
   margin: 0;
 }
 
 .site-navigation a {
   display: flex;
-  justify-content: space-between;
   display: block;
-  margin-top: 0;
-  padding: 26px 15px;
+  width: 227px;
+  height: 56px;
+  margin: 0;
   background-color: var(--basic-white);
   color: var(--basic-black);
   text-transform: uppercase;
@@ -89,6 +90,27 @@ img {
 .site-navigation-text:hover,
 .site-navigation-text:focus {
   background-color: var(--basic-white);
+}
+
+
+.site-navigation-text-information {
+  text-align: left;
+  padding-left: 72px;
+}
+
+.site-navigation-text-galary {
+  text-align: left;
+  margin-right: 202px;
+}
+
+.site-navigation-text-map {
+  text-align: right;
+  margin-left: 216px;
+}
+
+.site-navigation-text-hotel {
+  text-align: right;
+  padding-right: 72px;
 }
 
 .main-header-logo {
@@ -143,7 +165,10 @@ img {
 }
 
 .mainlogo-background {
-  background-image: url("../img/hill1.jpg");
+  background-image: url("../img/hill1.jpg"),
+  url("../img/backgroundshape.svg");
+  background-position: 0 0,
+  left bottom;
   display: grid;
   background-repeat: no-repeat;
   width: 1200px;
@@ -163,24 +188,18 @@ img {
 
 .mainlogo-background-photo {
   display: grid;
-  padding: 76px 0;
+  padding-top: 76px;
+  padding-bottom: 85px;
   justify-self: center;
+  vertical-align: middle;
+  margin: 0;
 }
 
 .main-cheker {
   background-color: var(--basic-white);
 }
 
-.main-navigation-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--basic-white);
-}
 
-.main-header-bar {
-  background-color: var(--basic-white);
-}
 
 /* Features */
 
