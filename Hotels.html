@@ -82,19 +82,29 @@
       <li class="sort-item"><a href="#">По типу</a></li>
       <li class="sort-item"><a href="#">По рейтингу</a></li>
     </ul>
+    <ul class="sort-list-triangle">
+      <li class="sort-list-triangle-simple">
+        <a calss="triangl-menu"><img src="img/triangle.svg" width="11" height="10" alt="triangle"></a>
+      </li>
+      <li class="sort-list-triangle-blue">
+        <a calss="triangl-menu"><img src="img/triangle.svg" width="11" height="10" alt="triangleblue"></a>
+      </li>
+    </ul>
     </div>
     <ul class="places-list">
       <li class="places-item-hotel">
         <img class="hotelphoto" src="img/hotelphoto.jpg" width="135" height="90" alt="Amara Resort & Spa">
         <div class="places-item-hotel-content">
         <h3 class="item-hotel-name">Amara Resort & Spa</h3>
-        <p class="item-hotel-price">Гостиница</p>
-        <p class="item-hotel-price">От 4000 Р.</p>
+        <div class="wrapper">
+        <p class="item-hotel-price-hotel">Гостиница</p>
+        <p class="item-hotel-price-cost">От 4000 Р.</p>
+        </div>
         <button class="button-price-detailed" type="button">Подробнее</button>
         <button class="button-price-reservation" type="button">Забронировать</button>
         </div>
         <div class="rating-box">
-          <div>
+          <div class="stars">
             <img src="img/star.svg" width="19" height="17" alt="Рейтинг 4 звезды из 5">
             <img src="img/star.svg" width="19" height="17" alt="">
             <img src="img/star.svg" width="19" height="17" alt="">
@@ -105,15 +115,17 @@
       </li>
       <li class="places-item-motel">
         <img class="motelphoto" src="img/motelphoto.jpg" width="135" height="90" alt="Desert Quail Inn">
-        <div>
+        <div class="places-item-hotel-content">
         <h3 class="item-motel-name">Desert Quail Inn</h3>
-        <p class="item-motel-price">Мотель</p>
-        <p class="item-motel-price">От 3000 Р.</p>
+        <div class="wrapper">
+        <p class="item-motel-price-motal">Мотель</p>
+        <p class="item-motal-price-cost">От 3000 Р.</p>
+        </div>
         <button class="button-price-detailed" type="button">Подробнее</button>
         <button class="button-price-reservation" type="button">Забронировать</button>
         </div>
-        <div>
-          <div>
+        <div class="rating-box">
+          <div class="stars">
             <img src="img/star.svg" width="19" height="17" alt="Рейтинг 3 звезды из 5">
             <img src="img/star.svg" width="19" height="17" alt="">
             <img src="img/star.svg" width="19" height="17" alt="">
@@ -123,15 +135,17 @@
       </li>
       <li class="places-item-apartments">
         <img class="homeforest" src="img/homeforest.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-        <div>
+        <div class="places-item-hotel-content">
         <h3 class="item-apartments-name">Villas at Poco Diablo</h3>
-        <p class="item-apartments-price">Апартаменты</p>
-        <p class="item-apartments-price">От 2000 Р.</p>
+        <div class="wrapper">
+        <p class="item-apartments-price-apartments">Апартаменты</p>
+        <p class="item-apartments-price-cost">От 2000 Р.</p>
+        </div>
         <button class="button-price-detailed" type="button">Подробнее</button>
         <button class="button-price-reservation" type="button">Забронировать</button>
         </div>
-        <div>
-          <div>
+        <div class="rating-box">
+          <div class="stars">
             <img src="img/star.svg" width="19" height="17" alt="Рейтинг 2 звезды из 5">
             <img src="img/star.svg" width="19" height="17" alt="">
           </div>
