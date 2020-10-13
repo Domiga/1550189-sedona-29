@@ -2,6 +2,7 @@
 :root {
   --basic-black: #000000;
   --basic-white: #FFFFFF;
+  --basic-whiter:rgba(255, 255, 255, 0.3);
   --basic-grey: #888888;
   --basic-grey-light: #666666;
   --basic-grey-darcen: #CACACA;
@@ -230,7 +231,18 @@ img {
   background-color: var(--basic-white);
 }
 
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* Features */
 
@@ -520,23 +532,52 @@ img {
 }
 
 .footer-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--basic-white-light);
   color: var(--basic-black);
+  padding: 23px 0 36px 111px;
+  width: 252px;
 }
 
 .footer-contacts a {
   color: var(--basic-black);
-  background-color: var(--basic-white-light);
-  font-size: 21px;
-  line-height: 26px;
+    background-color: var(--basic-white-light);
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
 }
 
-.footer-social {
+.footer-contacts-img {
+  width: 166px;
+  margin-bottom: 9px;
   text-align: center;
 }
 
-.footer-social li {
+.footer-contacts-phone {
+  width: 251px;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  padding: 36px 0;
+  margin: 0 auto;
+  justify-content: space-between;
   list-style: none;
+}
+
+
+.footer-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 139px;
 }
 
 .footer-website {
@@ -545,6 +586,8 @@ img {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+  width: 74px;
+  margin-right: 8px;
 }
 
 /* Modal */
@@ -689,19 +732,20 @@ img {
   transform: rotate(-180deg);
 }
 
-.sort-list-triangle-simple a:hover {
-  background-color: var(--basic-black);
+.triangle-button:hover path {
+  fill: var(--basic-black);
 }
 
-.sort-list-triangle-simple a:focus,
-.sort-list-triangle-simple a:active {
-  background-color: var(--basic-blue);
+.triangle-button:focus path {
+  fill: var(--basic-blue);
 }
 
-.sort-list-triangle-blue.disabled,
-.sort-list-triangle-blue:disabled {
-  cursor: default;
-  background-color: var(--basic-blue);
+.triangle-button:active path {
+  fill: var(--basic-blue);
+}
+
+.social-button-active:disabled path{
+  fill: var(--basic-blue);
 }
 
 .sort-item-cost a {
@@ -971,20 +1015,36 @@ img {
 /* Social button */
 
 .social-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
   background-color: var(--basic-blue);
+  color: inherit;
 }
+
+.footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+
 
 .social-button:hover {
   background-color: var(--basic-blue-darken);
 }
 
-.social-button:focus,
-.social-button:active {
-  background-color: var(--basic-blue-dark);
+.social-button:focus path,
+.social-button:active path {
+  fill: var(--basic-whiter) ;
 }
-
 
 .choice-cost-button {
   background-color: var(--basic-white);
