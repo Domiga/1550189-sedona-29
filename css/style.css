@@ -65,13 +65,14 @@ img {
 /* Main navigation */
 
 .main-navigation {
-  display: flex;
-  width: 1200px;
-  font-size: 14px;
-  line-height: 26px;
-  background-color: var(--basic-white);
-  color: var(--basic-black);
-  margin: 0;
+    display: flex;
+    width: 1200px;
+    position: relative;
+    font-size: 14px;
+    line-height: 26px;
+    background-color: var(--basic-white);
+    color: var(--basic-black);
+    margin: 0;
 }
 
 .site-navigation {
@@ -125,7 +126,7 @@ img {
 .main-header-logo {
   position: absolute;
   top: 0;
-  left: 640px;
+  left: 531px;
   width: 138px;
   height: 70px;
   order: 2;
@@ -147,8 +148,7 @@ img {
   align-items: center;
   background-color: var(--basic-white);
   margin: 0 0;
-  padding-top: 42px;
-  padding-bottom: 51px;
+  padding: 43px 341px 51px 340px;
 }
 
 .container-header-first {
@@ -158,9 +158,9 @@ img {
   line-height: 26px;
   text-align: center;
   max-width: 470px;
-  margin: 0;
+  margin: 0 0 16.5px 0;
   font-weight: 700;
-  padding-bottom: 31px;
+  height: 80px;
 }
 
 .container-header-second {
@@ -175,8 +175,7 @@ img {
 }
 
 .advantage-first-text {
-  padding-top: 47px;
-  margin: 0;
+  padding: 47px 51px 54px 52px;
 }
 
 
@@ -256,13 +255,11 @@ img {
 
 .advantage-first h3 {
   background-color: var(--basic-blue);
-  color: var(--basic-white);
-  font-size: 21px;
-  line-height: 21px;
-  margin: 0;
-  width: 122px;
-  text-align: center;
-  padding-left: 139px;
+    color: var(--basic-white);
+    font-size: 21px;
+    line-height: 21px;
+    margin: 0 0 25px 0;
+    font-weight: 700;
 }
 
 .advantage-first p {
@@ -272,17 +269,14 @@ img {
   line-height: 21px;
   font-weight: 400;
   text-align: center;
-
 }
 
 .advantage-first-paragraph-one {
-  margin: 25px 0 23px;
+  margin: 0 0 23px 0;
 }
 
 .advantage-first-paragraph-two {
-  width: 297px;
   margin: 0;
-  padding-left: 52px;
 }
 
 /* img-first */
@@ -303,6 +297,7 @@ img {
   line-height: 21px;
   text-align: center;
   font-weight: 400;
+  margin: 0;
 }
 
 .features-item-first h3 {
@@ -312,6 +307,7 @@ img {
   line-height: 21px;
   font-weight: 700;
   text-align: center;
+  margin: 0 0 25px 0;
 }
 
 .advantage-third {
@@ -319,19 +315,16 @@ img {
   grid-template-columns: 2fr 1fr;
 }
 
-.advantage-third-text {
-  background-color: var(--basic-blue);
-  padding-top: 50px;
-  margin: 0;
+.features-item-live {
+  padding: 160px 73px 82px 73px;
+  position: relative;
 }
 
-.advantage-third-text p {
+.advantage-third-text {
   background-color: var(--basic-blue);
-  color: var(--basic-white);
-  font-size: 14px;
-  line-height: 21px;
+  padding: 50px 49px 51px 49px;
+  margin: 0;
   text-align: center;
-  font-weight: 400;
 }
 
 .advantage-third-text h3 {
@@ -339,56 +332,70 @@ img {
   color: var(--basic-white);
   font-size: 21px;
   line-height: 21px;
-  text-align: center;
   font-weight: 700;
-  width: 150px;
-  margin: 0 0 0 126px;
+  margin: 0 0 25px 0;
+}
+
+.advantage-third-text p {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 .features-item-first-housing::before {
   content: "";
-  position: absolute;
-  top: 1096px;
-  left: 202px;
-  width: 75px;
-  height: 72px;
-  background-image: url("../img/home.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+    position: absolute;
+    top: 60px;
+    left: 162px;
+    width: 75px;
+    height: 72px;
+    background-image: url(../img/home.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.features-item-meal {
+  padding: 160px 52px 82px 51px;
+  position: relative;
 }
 
 .features-item-first-food::before {
   content: "";
   position: absolute;
-  top: 1097px;
-  left: 602px;
+  top: 61px;
+  left: 163px;
   width: 75px;
-  height: 72px;
+  height: 70px;
   background-image: url("../img/burger.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
+.features-item-present {
+  padding: 160px 65px 81px 65px;
+  position: relative;
+}
+
 .features-item-first-souvenirs::before {
   content: "";
   position: absolute;
-  top: 1091px;
-  left: 1008px;
-  width: 75px;
-  height: 72px;
+  top: 55px;
+  left: 168px;
+  width: 64px;
+  height: 77px;
   background-image: url("../img/present.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.advantage-third-text-number {
-  margin: 25px 0 23px 0;
+.advantage-third-text-one {
+  margin: 0 0 23px 0;
 }
 
 .advantage-third-discription {
   margin: 0;
-  width: 301px;
-  padding-left: 50px;
 }
 
 .features-list-second {
