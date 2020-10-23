@@ -17,7 +17,7 @@
       <div class="main-header-bar">
         <div class="main-navigation-wrapper">
           <ul class="site-navigation">
-            <li class="site-navigation-list-information"><a class="site-navigation-text-information" href="#">Информация</a></li>
+            <li class="site-navigation-list-information"><a class="site-navigation-text-information text-information-second" href="#">Информация</a></li>
             <li class="site-navigation-list-galary"><a class="site-navigation-text-galary" href="index.html">Фото и видео</a></li>
             <li class="site-navigation-list-map"><a class="site-navigation-text-map" href="index.html">Карта штата</a></li>
             <li class="site-navigation-list-hotel"><a class="site-navigation-text-hotel" href="hotels.html">Гостиницы</a></li>
@@ -27,60 +27,81 @@
     </nav>
   </header>
 <main class="main-cheker container">
-  <h1 hidden>Выбор гостиницы в Седоне</h1>
-  <h2 hidden>Выбор гостиницы по критериям</h2>
-  <div class="check-boks">
-  <div class="cheker-list">
-    <h3 class="infrastructure">Инфраструктура:</h3>
+  <h1 class="visually-hidden">Выбор гостиницы в Седоне</h1>
+  <h2 class="visually-hidden">Выбор гостиницы по критериям</h2>
+
+<section class="filter">
+  <div class="infrastructure">
+    <p>Инфраструктура:</p>
     <ul class="infrastructure-list">
-      <li class="infrastructure-item">
+      <li class="filter-option infrastructure-item">
+        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="swimming-pool" checked value="Бассейн">
         <label for="swimming-pool">Бассейн</label>
-        <input type="checkbox" id="swimming-pool" checked value="Бассейн">
       </li>
-      <li class="infrastructure-item">
+      <li class="filter-option infrastructure-item">
+        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="Parking" value="Парковка">
         <label for="Parking">Парковка</label>
-        <input type="checkbox" id="Parking" value="Парковка">
       </li>
-      <li class="infrastructure-item">
+      <li class="filter-option infrastructure-item">
+        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="network" value="Wi-fi">
         <label for="network">Wi-fi</label>
-        <input type="checkbox" id="network" value="Wi-fi">
       </li>
     </ul>
   </div>
-  <div class="choice-housing">
-    <h3 class="type-housing">Тип жилья:</h3>
+  <div class="type-of-live">
+    <p>Тип жилья:</p>
     <ul class="choice-building">
-      <li class="building-item">
+      <li class="filter-option building-item">
+        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="hotel" checked value="Гостиница">
         <label for="hotel">Гостиница</label>
-        <input type="checkbox" id="hotel" checked value="Гостиница">
       </li>
-      <li class="building-item">
+      <li class="filter-option building-item">
+        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="motel" checked value="Мотель">
         <label for="motel">Мотель</label>
-        <input type="checkbox" id="motel" checked value="Мотель">
       </li>
-      <li class="building-item">
+      <li class="filter-option building-item">
+        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="apartments" checked value="Апартаменты">
         <label for="apartments">Апартаменты</label>
-        <input type="checkbox" id="apartments" checked value="Апартаменты">
       </li>
     </ul>
   </div>
-  <div class="choice-costs">
-    <h3 class="cost-daily">Стоимость в сутки (р):</h3>
-    <form class="choice-cost-daily">
-      <label for="dayscount">0 - 3000</label>
-      <input class="choice-cost-range" type="range" id="dayscount" min="0" max="3000" step="1">
-      <input class="choice-cost-button" type="button" value="Показать">
-    </form>
-  </div>
-  </div>
+
+ 
+    <fieldset class="filter-item">
+            <div class="price-controls">
+            <div class="price-controls-obgect">
+            <label class="min-price">
+              от <input type="number" name="min-price" value="0">
+            </label>
+            <div class="line">
+              <div class="line-bar"></div>
+            </div>
+            <label class="max-price">
+              до <input type="number" name="max-price" value="3000">
+            </label>
+            </div>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+            </div>
+            <button class="button-filter" type="button">Показать</button>
+        </div>
+    </fieldset>
+</section>
+
   <section class="section-list">
     <div class="sorting-head">
     <p class="sort-find">Найдено: 3</p>
     <h4 class="sort-name">Сортировка:</h4>
     <ul class="sort-list">
       <li class="sort-item-cost"><a href="#">По цене</a></li>
-      <li class="sort-item"><a href="#">По типу</a></li>
-      <li class="sort-item"><a href="#">По рейтингу</a></li>
+      <li class="sort-item sort-item-type"><a href="#">По типу</a></li>
+      <li class="sort-item sort-item-rating"><a href="#">По рейтингу</a></li>
     </ul>
     <ul class="sort-list-triangle">
       <li class="sort-list-triangle-simple">
@@ -89,7 +110,6 @@
           <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA"/></svg>
         </a>
       </li>
-      <li class="sort-list-triangle-blue">
         <a class="triangle-button social-button-active" href="#">
           <span class="visually-hidden">Переключатель меню</span>
           <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA"/></svg>

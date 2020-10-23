@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="page-body">
 <header class="main-header">
   <nav class="main-navigation">
@@ -15,7 +16,7 @@
       <img src="img/mainlogo.svg" width="138" height="70" alt="Логотип">
     </a>
         <ul class="site-navigation">
-          <li class="site-navigation-list"><a class="site-navigation-text-information" href="#">Информация</a></li>
+          <li class="site-navigation-list"><a class="site-navigation-text-information text-information-main" href="#">Информация</a></li>
           <li class="site-navigation-list"><a class="site-navigation-text-galary" href="index.html">Фото и видео</a></li>
           <li class="site-navigation-list"><a class="site-navigation-text-map" href="index.html">Карта штата</a></li>
           <li class="site-navigation-list"><a class="site-navigation-text-hotel" href="hotels.html">Гостиницы</a></li>
@@ -82,7 +83,7 @@
     <li class="features-item-second-second">
       <h3 class="advantage-third-head-forth">Красивая дорога</h3>
       <p class="advantage-third-paragraph-forth-number">- №4 -</p>
-      <p class="advantage-third-paragraph-forth-discription">Ехать в седону из Лас-Вегаса совсем не скчно!</p>
+      <p class="advantage-third-paragraph-forth-discription">ехать в седону из лас-вегаса совсем не скучно!</p>
     </li>
     <li class="features-item-second-third">
       <h3 class="advantage-third-head-fifth">Мало туристов</h3>
@@ -90,30 +91,45 @@
       <p class="advantage-third-paragraph-fifth-discription">Большинство идет в Гранд Каньон и толпится там</p>
     </li>
   </ul>
-  <div class="container-low">
-    <h2 class="container-low-head">Заинтересовались?</h2>
-    <p class="container-low-paragraph">Укажите для предполагаемые даты поездки, и мы покажем вам лучшие предложения
+  <section class="container-low">
+  <div class="container-low-block">
+    <p class="container-low-head">Заинтересовались?</p>
+    <p class="container-low-paragraph">Укажите для предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
       гостиниц в Седоне</p>
+    </div>
     <button class="find-hotel-button" href="#">Поиск гостиницы в седоне</button>
+  </section>
+
+  <section class="modal modal-login">
+    <h3 class="visually-hidden">Форма ввода данных</h3>
     <form class="modal-form" action="#" method="post">
       <p>
-        <label for="arrival" class="date-arrival">Дата заезда:</label>
-        <input type="text" name="arrival" id="arrival">
+        <label class="date-arrival" for="arrival" class="date-arrival">Дата заезда:</label>
+        <input class="date-arrival-number" type="text" name="arrival" id="arrival" value="24 апреля 2017">
       </p>
       <p>
-        <label for="departure" class="date-arrival">Дата выезда:</label>
-        <input type="text" name="departure" id="departure">
+        <label class="date-departure" for="departure" class="date-arrival">Дата выезда:</label>
+        <input class="date-departure-number" type="text" name="departure" id="departure" value="4 июля 2017">
+      </p>
+      <div class="human">
+      <p>
+        <label class="adults" for="adults" class="adults-people">Взрослые:</label>
+        <input class="adults-number" type="text" name="adults" id="adults" value="2">
       </p>
       <p>
-        <label for="adults" class="adults-people">Взрослые:</label>
-        <input type="text" name="adults" id="adults" value="2">
-        <label for="child" class="child-people">Дети:</label>
-        <input type="text" name="child" id="child" value="0">
+        <label class="childs" for="child" class="child-people">Дети:</label>
+        <input class="childs-number" type="text" name="child" id="child" value="0">
       </p>
-      <button class="button" type="button">Найти</button>
+      </div>
+      <button class="modal-login-button" type="button">Найти</button>
     </form>
-  </div>
-  <!-- Здесь будет карта -->
+  </section>
+    
+    <div class="modal-map">
+      <h3 class="visually-hidden">Как до нас добраться</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418800.108137637!2d-111.87527541603167!3d34.909565102197455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1603385049540!5m2!1sru!2sru" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <button class="visually-hidden" type="button">Закрыть</button>
+    </div>
 </main>
 
 <footer class="page-footer main-footer container">
@@ -138,6 +154,7 @@
           <svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg>
         </a>
       </li>
+    
       <li>
         <a class="social-button" href="#">
           <span class="visually-hidden">Ютуб</span>
