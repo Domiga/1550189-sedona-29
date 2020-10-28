@@ -7,6 +7,7 @@
   --basic-grey-dark: #BDBBBC;
   --basic-grey-light: #666666;
   --basic-grey-circle: #ABABAB;
+  --basic-grey-circle-dark: #6A6A6A;
   --basic-grey-circle-shadow: #ABABAB;
   --basic-grey-darcen: #CACACA;
   --basic-grey-lighter: #F2F2F2;
@@ -543,12 +544,20 @@ a.text-information-second:active {
   border: none;
   margin: 0;
   padding: 0;
+  order: 2; 
+}
+
+.modal-map {
+  position: relative;
+  top: 125px;
+  left: 0;
 }
 
 /* Main footer*/
 
 .page-footer {
   display: grid;
+  position: relative;
   background-color: var(--basic-white-light);
   color: var(--basic-black);
 
@@ -630,18 +639,6 @@ a.text-information-second:active {
 
 /* Modal */
 
-.modal {
-  background-color: var(--basic-white);
-  color: var(--basic-black);
-}
-
-.modal-form {
-  background-color: var(--basic-white);
-  color: var(--basic-black);
-  box-shadow: var(--basic-white-lihter);
-  font-size: 14px;
-  line-height: 26px;
-}
 
 
 .section-list {
@@ -1120,12 +1117,6 @@ a.text-information-second:active {
 ul .filter-option:last-child{
   margin-bottom: 0;
 }
-.infrastructure-item {
-  color: var(--basic-white);
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-}
 
 .choice-building {
   color: var(--basic-white);
@@ -1250,53 +1241,164 @@ ul .filter-option:last-child{
   padding: 7px 35px 8px 36px;
 }
 
-.filter-input-checkbox + label::before {
-  content: "";
-    position: absolute;
-    left: -40px;
-    top: -4px;
-    width: 23px;
-    height: 23px;
-    border: 3px solid var(--basic-white);
-    border-radius: 2px;
+.button-filter:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
 }
 
-.filter-input-checkbox:checked + label::after {
+.infrastructure-item {
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 21px;
+  
+}
+
+.filter-input-checkbox-empty + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/square.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox-full + label::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -30px;
-  width: 21.72px;
-  height: 16.76px;
+  left: -40px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/incomplete.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
+.filter-input-checkbox-full:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -36px;
+  width: 22px;
+  height: 17px;
   background-image: url(../img/tick.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
+
+.footer-logo-icon:hover path {
+  fill: var(--basic-blue);
+}
+
 /* Modal login */
+
+.modal {
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  background-image: url("img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
 .modal-login {
   top: 120px;
   bottom: auto;
   width: 568px;
-  padding: 50px 80px;
 }
 
-.modal {
-  color: var(--basic-black);
-  background-color: var(--basic-white);
-  background-position: 0 0;
-  background-repeat: repeat;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+.modal-form-date {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 55px;
 }
 
-.modal-form input[type="text"] {
+.modal-login input {
+  background-color: var(--basic-grey-lighter);
+  border: none;
+}
+
+.form-list-arrival input,
+.form-list-departure input {
+  width: 133px;
   font-size: 14px;
   line-height: 26px;
-  font-weight: 700;
-  color: var(--basic-black);
+  padding: 6px 200px 6px 13px;
   text-transform: uppercase;
-  background-color: var(--basic-grey-lighter);
-  border: solid var(--basic-grey-lighter);
+  font-weight: 700;
 }
 
+.form-list-arrival label,
+.form-list-departure label {
+  width: 112px;
+  
+}
 
+.form-list-adults input,
+.form-list-child input {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 38px;
+  padding: 6px 39px 6px 39px;
+}
+
+.form-list-arrival,
+.form-list-departure {
+  margin: 0 0 30px 0;
+}
+
+.date-arrival {
+  width: 121px;
+}
+
+.form-list-adults {
+  margin-top: 0;
+  margin-bottom: 54px;
+  width: 226px;
+}
+
+.form-list-child {
+  margin-top: 0;
+  margin-bottom: 54px;
+  width: 179px;
+  margin-left: auto;
+}
+
+.modal-login-button {
+  padding: 16px 181px;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+  text-align: center;
+  border: none;
+
+}
+
+.modal-login-button:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-blue-darken);
+}
+
+.modal-login-button:focus,
+.modal-login-button:active {
+  color: var(--basic-white-light-dark);
+  background-color: var(--basic-blue-dark);
+}
