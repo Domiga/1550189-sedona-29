@@ -77,6 +77,7 @@ img {
 
 .main-navigation {
   display: flex;
+  flex-direction: column;
   width: 1200px;
   position: relative;
   font-size: 14px;
@@ -91,7 +92,6 @@ img {
   flex-direction: row;
   list-style: none;
   padding: 15px 72px;
-  width: 1200px;
   margin: 0;
 }
 
@@ -119,10 +119,6 @@ img {
   color: var(--basic-black-lighter);
 }
 
-a.text-information-hostel {
-  color: var(--basic-brown);
-}
-
 .site-navigation li:nth-child(1) {
   text-align: left;
   margin: 0;
@@ -143,6 +139,10 @@ a.text-information-hostel {
   margin: 0;
 }
 
+a.site-navigation-list-hotels {
+  color: var(--basic-brown);
+}
+
 .main-header-logo {
   position: absolute;
   top: 0;
@@ -151,6 +151,7 @@ a.text-information-hostel {
   height: 70px;
   order: 2;
   justify-self: center;
+  z-index: 1;
 }
 
 .main-header {
@@ -193,6 +194,7 @@ a.text-information-hostel {
 }
 
 .mainlogo-background {
+  position: relative;
   background-image: url("../img/hill1.jpg");
   background-color: var(--basic-blue);
   display: grid;
@@ -205,10 +207,10 @@ a.text-information-hostel {
 .mainlogo-background::after {
   content: "";
   position: absolute;
-  top: 508px;
+  top: 452px;
   width: 1200px;
   height: 57px;
-  background-image: url("../img/backgroundshape.png");
+  background-image: url(../img/backgroundshape.png);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -784,7 +786,6 @@ a.text-information-hostel {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--basic-white-light);
   color: var(--basic-black);
   padding: 23px 0 36px 111px;
   width: 252px;
