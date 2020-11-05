@@ -5,7 +5,7 @@
         <title>HTML Academy: Седона</title>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style.min.css" />
     </head>
 
     <body class="page-body">
@@ -38,7 +38,7 @@
                     <div class="advantage-first-text">
                         <h3 class="advantage-first-head">Настоящий городок</h3>
                         <p class="advantage-first-paragraph-one">&#8212; №1 &#8212;</p>
-                        <p class="advantage-first-paragraph-two">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
+                        <p class="advantage-first-paragraph-two">Седона - не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
                     </div>
                     <img src="img/openbang.jpg" width="800" height="256" alt="Фото здания в седоне" />
                 </div>
@@ -87,7 +87,7 @@
                     <li class="features-item-second-third">
                         <h3 class="advantage-third-head-fifth">Мало туристов</h3>
                         <p class="advantage-third-paragraph-fifth-number">&#8212; №5 &#8212;</p>
-                        <p class="advantage-third-paragraph-fifth-discription">Большинство идет в Гранд Каньон и толпится там</p>
+                        <p class="advantage-third-paragraph-fifth-discription">Большинство едет в Гранд Каньон и толпится там</p>
                     </li>
                 </ul>
                 <section class="container-form">
@@ -95,8 +95,7 @@
                     <div class="container-form-block">
                         <p class="container-form-head">Заинтересовались?</p>
                         <p class="container-form-paragraph">
-                            Укажите для предполагаемые даты поездки,<br />
-                            и мы покажем вам лучшие предложения гостиниц в Седоне
+                            Укажите предполагаемые даты поездки,<br> и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;седоне
                         </p>
                     </div>
                     <div class="container-form-registration">
@@ -117,15 +116,27 @@
                                 <div class="form-list-people">
                                     <p class="form-list-adults">
                                         <label class="adults" for="adults">Взрослые:</label>
-                                        <button class="minus-button-adults" type="button" aria-label="увеличить количество взрослых на 1"></button>
+                                        <button class="minus-button-adults" type="button" aria-label="увеличить количество взрослых на 1">
+                                            <svg class="element-decrease" width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#A9A9A9" d="M0 0h12v3H0z" /></svg>
+                                        </button>
                                         <input class="adults-number" type="text" name="adults" id="adults" value="2" />
-                                        <button class="plus-button-adults" type="button" aria-label="уменьшить количество взрослых на 1"></button>
+                                        <button class="plus-button-adults" type="button" aria-label="уменьшить количество взрослых на 1">
+                                            <svg class="element-increase" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9" />
+                                            </svg>
+                                        </button>
                                     </p>
                                     <p class="form-list-child">
                                         <label class="childs" for="child">Дети:</label>
-                                        <button class="minus-button-child" type="button" aria-label="увеличить количество детей на 1"></button>
                                         <input class="childs-number" type="text" name="child" id="child" value="0" />
-                                        <button class="plus-button-child" type="button" aria-label="уменьшить количество детей на 1"></button>
+                                        <button class="minus-button-child" type="button" aria-label="увеличить количество детей на 1">
+                                            <svg class="element-decrease" width="12" height="3" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#A9A9A9" d="M0 0h12v3H0z" /></svg>
+                                        </button>
+                                        <button class="plus-button-child" type="button" aria-label="уменьшить количество детей на 1">
+                                            <svg class="element-increase" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23 6.77V11h2.54V6.77H11V4.23H6.77V0H4.23v4.23H0v2.54h4.23z" fill="#A9A9A9" />
+                                            </svg>
+                                        </button>
                                     </p>
                                 </div>
                                 <button class="modal-login-button" type="button" aria-label="подобрать нужную гостиницу по выбраным параметрам">Найти</button>
@@ -193,9 +204,8 @@
                         </li>
                     </ul>
                     <div class="footer-logo">
-                        <a class="footer-website" href="https://htmlacademy.ru/intensive/htmlcss">Website by</a>
+                        <p class="footer-website">Website by</p>
                         <a class="footer-logo-icon" href="https://htmlacademy.ru/intensive/htmlcss">
-                            <span class="visually-hidden">Иконка логотипа</span>
                             <svg width="115" height="41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     fill-rule="evenodd"
