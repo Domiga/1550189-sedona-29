@@ -5,20 +5,24 @@
         <title>HTML Academy: Седона</title>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/style.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
     <body class="page-body">
         <div class="container wrapper-box">
             <header class="main-header">
                 <nav class="main-navigation">
-                    <a class="main-header-logo">
-                        <img src="img/mainlogo.svg" width="138" height="70" alt="Логотип" />
+                    <a class="main-header-logo" href="index.html">
+                        <img src="img/mainlogo.svg" width="138" height="70" alt="Ссылка на главную страницу"/>
                     </a>
                     <ul class="site-navigation">
-                        <li class="site-navigation-list"><a class="site-navigation-link text-information-main" href="#">Информация</a></li>
-                        <li class="site-navigation-list"><a class="site-navigation-link" href="index.html">Фото и видео</a></li>
-                        <li class="site-navigation-list"><a class="site-navigation-link" href="index.html">Карта штата</a></li>
-                        <li class="site-navigation-list"><a class="site-navigation-link site-navigation-list-hotels" href="hotels.html">Гостиницы</a></li>
+                        <li class="site-navigation-list">
+                            <a class="site-navigation-link text-information-main" href="#">Информация</a></li>
+                        <li class="site-navigation-list">
+                            <a class="site-navigation-link" href="index.html">Фото и видео</a></li>
+                        <li class="site-navigation-list">
+                            <a class="site-navigation-link" href="index.html">Карта штата</a></li>
+                        <li class="site-navigation-list">
+                            <a class="site-navigation-link site-navigation-list-hotels" href="hotels.html">Гостиницы</a></li>
                     </ul>
                 </nav>
             </header>
@@ -28,27 +32,27 @@
 
                 <section class="filters">
                     <h2 class="visually-hidden">Фильтр жилья</h2>
-                    <form class="filter" method="get" action="https://echo.htmlacademy.ru/">
+                    <form class="filter" action="https://echo.htmlacademy.ru/courses" method="get">
                         <fieldset>
                             <legend>Инфраструктура:</legend>
                             <ul class="filter-list filter-infrastructure">
                                 <li class="filter-option filter-checkbox">
-                                    <label class="check check-filter-option" for="swimming-pool">
-                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="swimming-pool" checked value="Бассейн" />
+                                    <label class="check check-filter-option">
+                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="swimming-pool" checked name="Бассей" />
                                         <span class="check-box"></span>
                                         Бассейн
                                     </label>
                                 </li>
                                 <li class="filter-option filter-checkbox">
                                     <label class="check check-filter-option" for="Parking">
-                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="Parking" value="Парковка" />
+                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="Parking" name="Парковка"/>
                                         <span class="check-box"></span>
                                         Парковка
                                     </label>
                                 </li>
                                 <li class="filter-option filter-checkbox">
                                     <label class="check check-filter-option" for="network">
-                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="network" value="Wi-fi" />
+                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="network" name="Wi-fi"/>
                                         <span class="check-box"></span>
                                         Wi-fi
                                     </label>
@@ -61,21 +65,21 @@
                             <ul class="filter-list filter-type-live">
                                 <li class="filter-option filter-checkbox">
                                     <label class="check check-filter-option check-filter-option-right" for="hotel">
-                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="hotel" checked value="Гостиница" />
+                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="hotel" checked name="Гостиница"/>
                                         <span class="check-box"></span>
                                         Гостиница
                                     </label>
                                 </li>
                                 <li class="filter-option filter-checkbox">
                                     <label class="check check-filter-option check-filter-option-right" for="motel">
-                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="motel" checked value="Мотель" />
+                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="motel" checked name="Мотель"/>
                                         <span class="check-box"></span>
                                         Мотель
                                     </label>
                                 </li>
                                 <li class="filter-option filter-checkbox">
                                     <label class="check check-filter-option check-filter-option-right" for="apartments">
-                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="apartments" checked value="Апартаменты" />
+                                        <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" id="apartments" checked name="Апартаменты"/>
                                         <span class="check-box"></span>
                                         Апартаменты
                                     </label>
@@ -98,13 +102,13 @@
                                         <div class="scale">
                                             <div class="bar"></div>
                                         </div>
-                                        <div class="toggle toggle-min" tabindex="0"></div>
-                                        <div class="toggle toggle-max" tabindex="0"></div>
+                                        <div class="toggle toggle-min" tabindex="0" title="Левый ползунок"></div>
+                                        <div class="toggle toggle-max" tabindex="0" title="Правый ползунок"></div>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <button class="button-filter" type="submit" aria-label="показать список жилья по выбранным параметрам">Показать</button>
+                                <button class="button-filter" type="submit">Показать</button>
                             </div>
                         </fieldset>
                     </form>
@@ -113,22 +117,23 @@
                 <section class="section-list">
                     <div class="sorting-head">
                         <p class="sort-find">Найдено: 3</p>
-                        <h4 class="sort-name">Сортировка:</h4>
+                        <h3 class="sort-name">Сортировка:</h3>
                         <ul class="sort-list">
-                            <li class="sort-item"><a class="sort-item-cost" href="#">По цене</a></li>
-                            <li class="sort-item sort-item-type"><a href="#">По типу</a></li>
-                            <li class="sort-item sort-item-rating"><a href="#">По рейтингу</a></li>
+                            <li class="sort-item">
+                                <a class="sort-item-cost" href="#">По цене</a></li>
+                            <li class="sort-item sort-item-type">
+                                <a href="#">По типу</a></li>
+                            <li class="sort-item sort-item-rating">
+                                <a href="#">По рейтингу</a></li>
                         </ul>
                         <ul class="sort-list-triangle">
                             <li class="sort-list-triangle-simple">
-                                <a class="triangle-cursore" href="#">
-                                    <span class="visually-hidden">Переключатель меню</span>
+                                <a class="triangle-cursore" href="#" title="Переключиться на элемент сверху">
                                     <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA" /></svg>
                                 </a>
                             </li>
                             <li>
-                                <a class="triangle-cursore triangle-cursore-active" href="#">
-                                    <span class="visually-hidden">Переключатель меню</span>
+                                <a class="triangle-cursore triangle-cursore-active" href="#" title="Переключиться на элемент сверху">
                                     <svg class="triangle-bottom" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L0 10h11L5.5 0z" fill="#CACACA" /></svg>
                                 </a>
                             </li>
@@ -138,14 +143,16 @@
                         <li class="places-item-hotel">
                             <img class="hotelphoto" src="img/hotelphoto.jpg" width="135" height="90" alt="Amara Resort & Spa" />
                             <div class="places-item-hotel-content">
-                                <h3 class="item-hotel-name">Amara Resort & Spa</h3>
+                                <h3>
+                                    <a class="item-hotel-name" href="#">Amara Resort & Spa</a>
+                                </h3>
 
                                 <div class="name-price">
                                     <p class="item-hotel-price-hotel">Гостиница</p>
                                     <p class="item-hotel-price-cost">От 4000 Р.</p>
                                 </div>
-                                <button class="button-price-detailed" type="button" aria-label="кнопка подробнее">Подробнее</button>
-                                <button class="button-price-reservation" type="button" aria-label="кнопка забронировать">Забронировать</button>
+                                <a class="button-price-detailed" href="#">Подробнее</a>
+                                <a class="button-price-reservation" href="#">Забронировать</a>
                             </div>
                             <div class="rating-box">
                                 <div class="stars">
@@ -165,8 +172,8 @@
                                     <p class="item-motel-price-motal">Мотель</p>
                                     <p class="item-motal-price-cost">От 3000 Р.</p>
                                 </div>
-                                <button class="button-price-detailed" type="button" aria-label="кнопка подробнее">Подробнее</button>
-                                <button class="button-price-reservation" type="button" aria-label="кнопка забронировать">Забронировать</button>
+                                <a class="button-price-detailed" href="#">Подробнее</a>
+                                <a class="button-price-reservation" href="#">Забронировать</a>
                             </div>
                             <div class="rating-box">
                                 <div class="stars">
@@ -185,8 +192,8 @@
                                     <p class="item-apartments-price-apartments">Апартаменты</p>
                                     <p class="item-apartments-price-cost">От 2000 Р.</p>
                                 </div>
-                                <button class="button-price-detailed" type="button" aria-label="кнопка подробнее">Подробнее</button>
-                                <button class="button-price-reservation" type="button" aria-label="кнопка забронировать">Забронировать</button>
+                                <a class="button-price-detailed" href="#">Подробнее</a>
+                                <a class="button-price-reservation" href="#">Забронировать</a>
                             </div>
                             <div class="rating-box">
                                 <div class="stars">
